@@ -1,7 +1,7 @@
 {
     "short_name": "VAT calculator",
     "name": "Exclude VAT calculator",
-    "start_url": "?source=pwa",
+    "start_url": "/?source=pwa",
     "scope": ".",
     "background_color": "#3b82f6",
     "display": "standalone",
@@ -10,128 +10,122 @@
     "lang": "English",
     "icons": [
         {
-            "src": "/icons/icon-16x16.png",
+            "src": "/icons/Icon-16.png",
             "type": "image/png",
             "sizes": "16x16",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-20x20.png",
+            "src": "/icons/Icon-20.png",
             "type": "image/png",
             "sizes": "20x20",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-32x32.png",
+            "src": "/icons/Icon-32.png",
             "type": "image/png",
             "sizes": "32x32",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-40x40.png",
+            "src": "/icons/Icon-40.png",
             "type": "image/png",
             "sizes": "40x40",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-48x48.png",
+            "src": "/icons/Icon-48.png",
             "type": "image/png",
             "sizes": "48x48",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-64x64.png",
+            "src": "/icons/Icon-64.png",
             "type": "image/png",
-            "sizes": "20x20",
+            "sizes": "64x64",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-72x72.png",
+            "src": "/icons/Icon-72.png",
             "type": "image/png",
             "sizes": "72x72",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-96x96.png",
+            "src": "/icons/Icon-96.png",
             "type": "image/png",
             "sizes": "96x96",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-100x100.png",
+            "src": "/icons/Icon-100.png",
             "type": "image/png",
             "sizes": "100x100",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-114x114.png",
+            "src": "/icons/Icon-114.png",
             "type": "image/png",
             "sizes": "114x114",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-128x128.png",
+            "src": "/icons/Icon-128.png",
             "type": "image/png",
             "sizes": "128x128",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-144x144.png",
+            "src": "/icons/Icon-144.png",
             "type": "image/png",
             "sizes": "144x144",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-152x152.png",
+            "src": "/icons/Icon-152.png",
             "type": "image/png",
             "sizes": "152x152",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-172x172.png",
+            "src": "/icons/Icon-172.png",
             "type": "image/png",
             "sizes": "172x172",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-192x192.png",
+            "src": "/icons/Icon-192.png",
             "type": "image/png",
             "sizes": "192x192",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-196x196.png",
+            "src": "/icons/Icon-196.png",
             "type": "image/png",
             "sizes": "196x196",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-256x256.png",
+            "src": "/icons/Icon-256.png",
             "type": "image/png",
             "sizes": "256x256",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-384x384.png",
-            "type": "image/png",
-            "sizes": "384x384",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/icons/icon-512x512.png",
+            "src": "/icons/Icon-512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "any maskable"
         },
         {
-            "src": "/icons/icon-1024x1024.png",
+            "src": "/icons/Icon-1024.png",
             "type": "image/png",
             "sizes": "1024x1024",
             "purpose": "any maskable"
         },
         {
             "src": "/icons/logo.svg",
-            "sizes": "513x513",
+            "sizes": "512x512",
             "type": "image/svg+xml",
             "purpose": "any maskable"
         }
