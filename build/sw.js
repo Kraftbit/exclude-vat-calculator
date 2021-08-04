@@ -29,6 +29,10 @@ if (workbox) {
     "revision": "5b4f66b83d4f450e474166e6e2b080da"
   },
   {
+    "url": "css/tailwind.css",
+    "revision": "0bb10aff42ed37906c48dd673e280020"
+  },
+  {
     "url": "favicon.ico",
     "revision": "9d1a4e391c9d834b19cd49b10a9d3ad3"
   },
@@ -123,6 +127,10 @@ if (workbox) {
   {
     "url": "js/calc.min.js",
     "revision": "e818ce160382be6f2a12452d68ff5dc0"
+  },
+  {
+    "url": "js/calculator.js",
+    "revision": "5c876e38d57fd34f7b1b97bfa2f89df1"
   },
   {
     "url": "js/workbox-sw.js",

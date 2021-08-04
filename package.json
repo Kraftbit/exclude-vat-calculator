@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy": "copyfiles -u 1 src/**/**/* src/**/* src/* build",
-    "prod": "NODE_ENV=production npx tailwindcss -i tailwind.css -o src/css/style.css --minify && npx uglifyjs calculator.js -o ./src/js/calc.min.js --source-map && npm run copy && workbox injectManifest workbox-config.js"
+    "prod": "NODE_ENV=production npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --minify && npx uglifyjs ./src/js/calculator.js -o ./src/js/calc.min.js --source-map && npm run copy && workbox injectManifest workbox-config.js"
   },
   "keywords": ["vat", "calculator", "exclude"],
   "author": "KRAFTBIT",

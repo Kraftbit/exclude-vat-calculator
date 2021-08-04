@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+[x-cloak] {
+    display: none !important;
+}
+
+input[type="radio"]+label span {
+    transition: background .2s,
+        transform .2s;
+}
+
+input[type="radio"]+label span:hover,
+input[type="radio"]+label:hover span {
+    transform: scale(1.4);
+}
+
+input[type="radio"]:checked+label span {
+    @apply bg-blue-500;
+    box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type="radio"]:checked+label {
+    @apply text-blue-500;
+}
