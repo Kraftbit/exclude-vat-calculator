@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="icon" type="image/svg+xml" href="../icons/logo.svg">
+    <link rel="alternate icon" href="../favicon.ico">
+    <link rel="mask-icon" href="../icons/logo.svg" color="#3b82f6">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <title>Exclude VAT - VAT calculator</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="../css/style.css" rel="stylesheet">
+    <script defer src="../js/alpinejs.min.js"></script>
+</head>
+
+<body>
+    <div
+        class="bg-gradient-to-tl from-blue-800 to-blue-500 text-white font-mono flex flex-col min-h-screen min-w-full p-4">
+
+        <h1 class="text-3xl mt-8 text-center">Exclude VAT Calculator <img
+                class="h-8 lg:h-12 w-8 lg:w-12 transform rotate-6 inline-block" src="../icons/logo.svg" /></h1>
+
+        <p class="text-sm lg:text-md mt-6 text-center">Online VAT calculator - exclude or add VAT from / to amount.</p>
+
+        <div class="w-full pt-10 flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/6">
+                <!--
+                    <p>marketing</p>
+                -->
+            </div>
+            <div class="w-full lg:w-2/3" x-data="calculator()">
+                <div class="w-full bg-white border border-white text-black rounded-lg p-6 text-center">
+                    <h1 class="text-3xl">Offline</h1>
+                    <p class="padded">Woops! Looks like your internet connection is not working.</p>
+                    <br><br>
+                    <a href="../index.html" class="underline">&#8634; Refresh</a>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/6">
+                <!--
+                    <p>marketing</p>
+                -->
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

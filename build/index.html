@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="icons/logo.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="mask-icon" href="icons/logo.svg" color="#3b82f6">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <title>Exclude VAT - VAT calculator</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/alpinejs.min.js"></script>
+</head>
+
+<body>
+    <div
+        class="bg-gradient-to-tl from-blue-800 to-blue-500 text-white font-mono flex flex-col min-h-screen min-w-full p-4">
+
+        <h1 class="text-3xl mt-8 text-center">Exclude VAT Calculator <img
+                class="h-8 lg:h-12 w-8 lg:w-12 transform rotate-6 inline-block" src="icons/logo.svg" /></h1>
+
+        <p class="text-sm lg:text-md mt-6 text-center">Online VAT calculator - exclude or add VAT from / to amount.</p>
+
+        <div class="w-full pt-10 flex flex-col lg:flex-row">
+            <div class="w-full lg:w-1/6">
+                <!--
+                    <p>marketing</p>
+                -->
+            </div>
+            <div class="w-full lg:w-2/3" x-data="calculator()">
+                <div
+                    class="w-full bg-white border border-white text-black drop-shadow-lg rounded-lg p-6 flex flex-col lg:flex-row">
+                    <div class="w-full lg:1/4 p-1">
+                        <input type="number" placeholder="Amount" x-model="amount" min="0" step="0.01"
+                            class="p-2 text-3xl bg-gray-300 w-full focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50 focus:border-transparent"
+                            autofocus />
+                    </div>
+                    <div class="w-full lg:1/4 p-1 mt-4 lg:mt-0">
+                        <input type="number" placeholder="VAT(%)" x-model="vat" min="0" step="0.01"
+                            class="p-2 text-3xl bg-gray-300 w-full focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50 focus:border-transparent" />
+                    </div>
+                    <div class="w-full lg:1/4 p-1 mt-4 lg:mt-0 text-center flex flex-wrap justify-center">
+                        <div class="w-2/5 flex justify-center items-center text-gray-500 text-sm">Exclude VAT</div>
+                        <div class="w-1/5 flex justify-center items-center">
+                            <div class="relative rounded-full w-full h-6 transition duration-200 ease-linear"
+                                :class="[type === '1' ? 'bg-green-400' : 'bg-red-400']">
+                                <label for="type"
+                                    class="absolute left-0 bg-white border-2 mb-2 w-1/2 h-6 rounded-full transition transform duration-100 ease-linear cursor-pointer"
+                                    :class="[type === '1' ? 'translate-x-full border-green-400' : 'translate-x-0 border-red-400']"></label>
+                                <input type="checkbox" id="type" name="type" 
+                                    class="appearance-none w-full h-full active:outline-none focus:outline-none cursor-pointer"
+                                    @click="type === '0' ? type = '1' : type = '0'">
+                            </div>
+                        </div>
+                        <div class="w-2/5 flex justify-center items-center text-gray-500 text-sm mx-auto">Add VAT</div>
+                    </div>
+                    <div class="w-full lg:1/4 p-1 mt-4 lg:mt-0">
+                        <button
+                            class="bg-green-500 text-white text-3xl p-2 w-full hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50"
+                            @click="calculation()">CALCULATE</button>
+                    </div>
+                </div>
+
+                <div x-show="emptyData" x-cloak class="w-full mt-2">
+                    <p class="text-center text-sm">Enter amount and VAT(%) to make calculation possible.</p>
+                </div>
+
+                <table x-show="calculations.length > 0" x-cloak
+                    class="w-full table-auto text-center mt-6 rounded-br-lg rounded-bl-lg">
+                    <thead class="bg-purple-600 text-white">
+                        <tr>
+                            <th class="py-1">Amount</th>
+                            <th class="py-1">VAT %</th>
+                            <th class="py-1">Type</th>
+                            <th class="py-1">VAT only</th>
+                            <th class="py-1">Calculated</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white text-blue-700 font-semibold">
+                        <template x-for="data in calculations">
+                            <tr class="border-b dotted">
+                                <td class="py-0.5" x-text="data.amount"></td>
+                                <td class="py-0.5" x-text="data.vat + ' %'"></td>
+                                <td class="py-0.5" x-text="data.type"></td>
+                                <td class="py-0.5" x-text="data.addedValue"></td>
+                                <td class="py-0.5" x-text="data.finalValue"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="w-full lg:w-1/6">
+                <!--
+                    <p>marketing</p>
+                -->
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/calc.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                    })
+                    .catch(err => {
+                        console.log(`Service Worker registration failed: ${err}`);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
