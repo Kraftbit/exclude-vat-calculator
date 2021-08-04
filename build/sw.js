@@ -151,7 +151,7 @@ if (workbox) {
             ]
         })
     );
-    */
+   
 
     const articleHandler = workbox.strategies.networkFirst({
         cacheName: 'index-cache',
@@ -161,8 +161,11 @@ if (workbox) {
             })
         ]
     });
+     */
 
-    workbox.routing.registerRoute(/(.*)index(.*)\.html/, args => {
+    //     workbox.routing.registerRoute(/(.*)index(.*)\.html/, args => {
+
+    workbox.routing.registerRoute('', args => {
         return articleHandler.handle(args).then(response => {
             if (!response) {
                 return caches.match('pages/offline.html');
