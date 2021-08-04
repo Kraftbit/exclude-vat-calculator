@@ -37,7 +37,7 @@ if (workbox) {
     const articleHandler = workbox.strategies.networkFirst({
         cacheName: 'index-cache',
         plugins: [
-            new workbox.expiration.Plugin({
+            new workbox.expiration.ExpirationPlugin({
                 maxEntries: 50,
             })
         ]
