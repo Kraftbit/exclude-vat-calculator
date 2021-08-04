@@ -21,6 +21,7 @@ if (workbox) {
 
     workbox.precaching.precacheAndRoute([]);
 
+    /*
     workbox.routing.registerRoute(
         /(.*)articles(.*)\.(?:png|gif|jpg)/,
         workbox.strategies.cacheFirst({
@@ -33,6 +34,7 @@ if (workbox) {
             ]
         })
     );
+    */
 
     const articleHandler = workbox.strategies.networkFirst({
         cacheName: 'index-cache',
@@ -53,7 +55,6 @@ if (workbox) {
             return response;
         });
     });
-
 
 } else {
     console.log('Boo! Workbox didnt load 😬');
