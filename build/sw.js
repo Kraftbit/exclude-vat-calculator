@@ -22,11 +22,11 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "0fb3ca05e2982f2175777dea2c51fea3"
+    "revision": "7bbd77409c58a32c85ccadb4c1cef9b8"
   },
   {
     "url": "css/style.css",
-    "revision": "3c2dbd4776b8846d116a5c6cdae12c7a"
+    "revision": "e397e622c568b1ad0f8bb7c3905913a6"
   },
   {
     "url": "css/tailwind.css",
