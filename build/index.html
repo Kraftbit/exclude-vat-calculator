@@ -31,16 +31,16 @@
                     <p>marketing</p>
                 -->
             </div>
-            <div class="w-full lg:w-2/3" x-data="calculator()">
+            <div class="w-full lg:w-2/3" x-data="calculator()" x-init="$refs.amountInput.focus()">
                 <div
                     class="w-full bg-white border border-white text-black drop-shadow-lg rounded-lg p-6 flex flex-col lg:flex-row">
                     <div class="w-full lg:1/4 p-1">
-                        <input type="number" placeholder="Amount" x-model="amount" min="0" step="0.01"
+                        <input type="number" placeholder="Amount" x-model="amount" min="0" step="0.01" @keyup.enter="getData()" name="amount" x-ref="amountInput"
                             class="p-2 text-3xl bg-gray-300 w-full focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50 focus:border-transparent"
                             autofocus />
                     </div>
                     <div class="w-full lg:1/4 p-1 mt-4 lg:mt-0">
-                        <input type="number" placeholder="VAT(%)" x-model="vat" min="0" step="0.01"
+                        <input type="number" placeholder="VAT(%)" x-model="vat" min="0" step="0.01" @keyup.enter="getData()" name="vat"
                             class="p-2 text-3xl bg-gray-300 w-full focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50 focus:border-transparent" />
                     </div>
                     <div class="w-full lg:1/4 p-1 mt-4 lg:mt-0 text-center flex flex-wrap justify-center">
@@ -66,7 +66,7 @@
                 </div>
 
                 <div x-show="emptyData" x-cloak class="w-full mt-2">
-                    <p class="text-center text-sm">Enter amount and VAT(%) to make calculation possible.</p>
+                    <p class="text-center text-sm text-red-400">Enter amount and VAT(%) to make calculation possible.</p>
                 </div>
 
                 <table x-show="data.length > 0" x-cloak
@@ -100,7 +100,7 @@
             </div>
 
         </div>
-        <p class="w-full text-center text-xs fixed bottom-1">crafted by <a class="underline hover:text-blue-900" target="_blank" href="https://kraftbit.com">KRAFTBIT</a></p>
+        <p class="w-full text-center text-xs fixed bottom-1">crafted by <a class="underline hover:text-blue-800" target="_blank" href="https://kraftbit.com">KRAFTBIT</a></p>
     </div>
     <script src="js/calc.min.js"></script>
     <script>
