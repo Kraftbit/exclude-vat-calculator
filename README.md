@@ -1,8 +1,8 @@
 # Exclude VAT calculator
 
-Exclude VAT calculator is web and PWA for calculating (substracting or adding) VAT (or any percentage) from amount.
+Exclude VAT calculator is web app and progressive web app (PWA) for calculating (substracting or adding) VAT (or any percentage) from amount.
 
-## Installation
+## Installation for  further development
 
 Clone this repo, install dependencies and run build.
 
@@ -13,14 +13,20 @@ npm install
 npm run build
 ```
 
+## PWA Installation 
+
+You can install PWA on you mobile / other device form your browser window (clicking + in address bar)
+
 ## Usage
 
 Run index.html from /build folder in your browser.
 
+## Demo
+
+You can check how this app runs here - [http://excludevat.com](excludevat.com).
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
