@@ -22,11 +22,11 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "59e7b89db43d9ffbebbd931dde79809a"
+    "revision": "a5430251839086c2572f0b719fb29e4c"
   },
   {
     "url": "css/style.css",
-    "revision": "5b4f66b83d4f450e474166e6e2b080da"
+    "revision": "98b5438801cec6d290a20eff602d9ebd"
   },
   {
     "url": "css/tailwind.css",
@@ -126,11 +126,11 @@ if (workbox) {
   },
   {
     "url": "js/calc.min.js",
-    "revision": "e818ce160382be6f2a12452d68ff5dc0"
+    "revision": "87bc010497aa0be292c10bd63e9f0841"
   },
   {
     "url": "js/calculator.js",
-    "revision": "5c876e38d57fd34f7b1b97bfa2f89df1"
+    "revision": "d622a0554fe485d97847434a2367fc5e"
   },
   {
     "url": "js/workbox-sw.js",

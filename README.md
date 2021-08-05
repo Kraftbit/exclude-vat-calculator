@@ -10,7 +10,7 @@ Clone this repo, install dependencies and run build.
 git clone git@github.com:Kraftbit/exclude-vat-calculator.git
 cd exclude-vat-calculator
 npm install
-npm run prod
+npm run build
 ```
 
 ## Usage
