@@ -47,12 +47,11 @@ window.calculator = function () {
 
         result() {
             if(this.type == '0') {
-
                 return  parseFloat(parseFloat(this.amount) - parseFloat(parseFloat(parseFloat(this.amount) / parseFloat(this.vat / 100 + 1) - this.amount ) * parseInt(-1)) ).toFixed(2);
             }
 
             if(this.type == '1') {
-                return parseFloat( (this.amount / 100) * parseInt(this.vat) + parseInt(this.amount)).toFixed(2);
+                return parseFloat( (this.amount / 100) * parseFloat(this.vat) + parseFloat(this.amount)).toFixed(2);
             }
         }
 
