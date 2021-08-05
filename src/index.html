@@ -75,8 +75,8 @@
                         <tr>
                             <th class="py-1">Amount</th>
                             <th class="py-1">VAT %</th>
-                            <th class="py-1">Type</th>
-                            <th class="py-1">VAT only</th>
+                            <th class="py-1">Operation</th>
+                            <th class="py-1">VAT amount</th>
                             <th class="py-1">RESULT</th>
                         </tr>
                     </thead>
@@ -85,7 +85,7 @@
                             <tr class="border-b dotted">
                                 <td class="py-0.5" x-text="result.amount"></td>
                                 <td class="py-0.5" x-text="result.vat + ' %'"></td>
-                                <td class="py-0.5" x-text="result.type"></td>
+                                <td class="py-0.5" x-html="result.type"></td>
                                 <td class="py-0.5" x-text="result.vatValue"></td>
                                 <td class="py-0.5" x-text="result.result"></td>
                             </tr>

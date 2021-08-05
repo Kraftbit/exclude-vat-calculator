@@ -23,7 +23,7 @@ window.calculator = function () {
                 this.data.unshift({
                     amount: this.amount,
                     vat: this.vat,
-                    type: this.type == '0' ? 'Exclude VAT' : 'Add VAT',
+                    type: this.type == '0' ? '<span class="text-red-500">- VAT</span>' : '<span class="text-green-500">+ VAT</span>',
                     vatValue: this.vatValue(),
                     result: this.result()
                 })
@@ -37,11 +37,11 @@ window.calculator = function () {
 
         vatValue() {
             if(this.type == '0') {
-                return parseFloat(parseFloat(parseFloat(this.amount) / parseFloat(this.vat / 100 + 1) - this.amount ) * parseInt(-1)).toFixed(2);
+                return parseFloat(parseFloat(parseFloat(this.amount) / parseFloat(this.vat / 100 + 1) - parseFloat(this.amount) ) * parseInt(-1)).toFixed(2);
             }
 
             if(this.type == '1') {
-                return parseFloat( (this.amount / 100) * this.vat ).toFixed(2);
+                return parseFloat((parseFloat(this.amount) / 100) * parseFloat(this.vat)).toFixed(2);
             }
         },
 
@@ -51,7 +51,7 @@ window.calculator = function () {
             }
 
             if(this.type == '1') {
-                return parseFloat( (this.amount / 100) * parseFloat(this.vat) + parseFloat(this.amount)).toFixed(2);
+                return parseFloat((parseFloat(this.amount) / 100) * parseFloat(this.vat) + parseFloat(this.amount)).toFixed(2);
             }
         }
 
