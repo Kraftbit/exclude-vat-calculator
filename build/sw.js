@@ -137,6 +137,10 @@ if (workbox) {
     "revision": "c39ab44e31cffb91e65ee5037d3ef8a5"
   },
   {
+    "url": "manifest.json",
+    "revision": "f657134148f295dbfb6cdaa12471efce"
+  },
+  {
     "url": "pages/404.html",
     "revision": "4c5aca6b03f04023fe44939f770c2144"
   },
