@@ -142,7 +142,7 @@ if (workbox) {
   },
   {
     "url": "pages/404.html",
-    "revision": "c8dec3c1d0d06725c2358ee67359500d"
+    "revision": "eafe7f865aafcadad9d513519c205c43"
   },
   {
     "url": "pages/offline.html",
