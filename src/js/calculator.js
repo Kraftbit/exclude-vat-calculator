@@ -23,7 +23,7 @@ window.calculator = function () {
                 this.data.unshift({
                     amount: this.amount,
                     vat: this.vat,
-                    type: this.type == '0' ? '<span class="text-red-500">- VAT</span>' : '<span class="text-green-500">+ VAT</span>',
+                    type: this.type == '0' ? '<span class="text-red-500 text-xs">-VAT</span>' : '<span class="text-green-500 text-xs">+VAT</span>',
                     vatValue: this.vatValue(),
                     result: this.result()
                 })

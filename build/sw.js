@@ -22,7 +22,7 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "786c106687a41007f80b8be113424276"
+    "revision": "b2c06290d87767000b9aedd425ee96f5"
   },
   {
     "url": "css/style.css",
@@ -126,11 +126,11 @@ if (workbox) {
   },
   {
     "url": "js/calc.min.js",
-    "revision": "b032dd53c35879ff42b5f4005cec1653"
+    "revision": "298b2f4ba343d007ee33add7aaba09b1"
   },
   {
     "url": "js/calculator.js",
-    "revision": "4fa60164741b08126a435601470dd65b"
+    "revision": "909b429cce3745fcab8eefbc0f47708c"
   },
   {
     "url": "js/workbox-sw.js",

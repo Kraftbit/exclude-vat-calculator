@@ -78,9 +78,9 @@
                     <thead class="text-white">
                         <tr>
                             <th class="py-1 text-xs ">Amount</th>
-                            <th class="py-1 text-xs ">VAT%</th>
-                            <th class="py-1 text-xs ">Operation</th>
-                            <th class="py-1 text-xs ">VAT amount</th>
+                            <th class="py-1 text-xs ">%</th>
+                            <th class="py-1 text-xs ">Type</th>
+                            <th class="py-1 text-xs ">VAT</th>
                             <th class="py-1 text-xs ">RESULT</th>
                         </tr>
                     </thead>
@@ -88,7 +88,7 @@
                         <template x-for="result in data">
                             <tr class="border-b dotted">
                                 <td class="py-0.5" x-text="result.amount"></td>
-                                <td class="py-0.5" x-text="result.vat + ' %'"></td>
+                                <td class="py-0.5" x-text="result.vat + '%'"></td>
                                 <td class="py-0.5" x-html="result.type"></td>
                                 <td class="py-0.5" x-text="result.vatValue"></td>
                                 <td class="py-0.5" x-text="result.result"></td>
@@ -105,7 +105,7 @@
         </div> 
     </div>
     <footer class="fixed bottom-0 w-full bg-blue-800 p-2">
-        <p class="w-full text-white  text-center text-xs">Disclosure: You are using VAT calculator at your own risk. Authors of the app are not responsible for any damage caused by incorrect informations or calculations. | crafted with <span class="text-red-500">&#10084;</span> by <a class="underline hover:text-blue-800" target="_blank" href="https://kraftbit.com">KRAFTBIT</a></p>
+        <p class="w-full text-white  text-center text-xs">Disclaimer: You are using VAT calculator at your own risk. Authors of the app are not responsible for any damage caused by incorrect informations or calculations. | Crafted with <span class="text-red-500">&#10084;</span> by <a class="underline hover:text-blue-800" target="_blank" href="https://kraftbit.com">KRAFTBIT</a></p>
     </footer>
     <script src="js/calc.min.js"></script>
     <script>
