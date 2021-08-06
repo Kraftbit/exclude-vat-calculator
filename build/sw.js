@@ -22,7 +22,7 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "d705de324e04d8b66e9c83b73ec26e75"
+    "revision": "62059c921aa2dffdc75c55da65f47d1c"
   },
   {
     "url": "css/style.css",
@@ -142,11 +142,11 @@ if (workbox) {
   },
   {
     "url": "pages/404.html",
-    "revision": "4c5aca6b03f04023fe44939f770c2144"
+    "revision": "c8dec3c1d0d06725c2358ee67359500d"
   },
   {
     "url": "pages/offline.html",
-    "revision": "7b8d2e38d8aa60e9ebe9383beb0dd703"
+    "revision": "b36abcace9f43ebcd3dec67c36cdfd1a"
   }
 ]);
 
