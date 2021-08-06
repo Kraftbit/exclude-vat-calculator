@@ -76,7 +76,7 @@
                     </div>
                     <div class="w-full lg:1/4 p-1 mt-4 lg:mt-0">
                         <button
-                            class="bg-green-500 text-white text-3xl p-2 w-full hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50"
+                            class="bg-green-600 text-white text-3xl p-2 w-full hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-blue-700 focus:ring-opacity-50"
                             @click="getData()">CALCULATE</button>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
         </div> 
     </div>
     <footer class="fixed bottom-0 w-full bg-blue-800 p-2">
-        <p class="w-full text-white font-mono text-center text-xs">Disclaimer: You are using VAT calculator at your own risk. Authors of the app are not responsible for any damage caused by incorrect informations or calculations. | Crafted with <span class="text-red-500">&#10084;</span> by <a class="hover:underline hover:text-blue-300" target="_blank" href="https://kraftbit.com">KRAFTBIT</a></p>
+        <p class="w-full text-white font-mono text-center text-xs">Disclaimer: You are using VAT calculator at your own risk. Authors of the app are not responsible for any damage caused by incorrect informations or calculations. | Crafted with <span class="text-red-500">&#10084;</span> by <a class="hover:underline hover:text-blue-300" target="_blank" rel="noreferrer noopener" href="https://kraftbit.com">KRAFTBIT</a></p>
     </footer>
     <script src="js/calc.min.js"></script>
     <script>
@@ -125,10 +125,10 @@
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
                     .then(registration => {
-                        console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                        //console.log(`Service Worker registered! Scope: ${registration.scope}`);
                     })
                     .catch(err => {
-                        console.log(`Service Worker registration failed: ${err}`);
+                        //console.log(`Service Worker registration failed: ${err}`);
                     });
             });
         }

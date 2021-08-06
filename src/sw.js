@@ -17,7 +17,7 @@ limitations under the License.
 importScripts('js/workbox-sw.js');
 
 if (workbox) {
-    console.log('Yay! Workbox is loaded 🎉');
+    //console.log('Yay! Workbox is loaded 🎉');
 
     workbox.precaching.precacheAndRoute([]);
 
@@ -60,5 +60,5 @@ if (workbox) {
     });
 
 } else {
-    console.log('Boo! Workbox didnt load 😬');
+    console.log('Workbox didnt load 😬');
 }

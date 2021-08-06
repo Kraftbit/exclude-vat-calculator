@@ -17,16 +17,16 @@ limitations under the License.
 importScripts('js/workbox-sw.js');
 
 if (workbox) {
-    console.log('Yay! Workbox is loaded 🎉');
+    //console.log('Yay! Workbox is loaded 🎉');
 
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "119d30029e52f160e6833e101c0140e7"
+    "revision": "c4dadbc3093dcee6667cca0795b1c16f"
   },
   {
     "url": "css/style.css",
-    "revision": "2c044133ac76c5a07d0de86565d108c1"
+    "revision": "556834357cc498c390ab273ffb412c45"
   },
   {
     "url": "css/tailwind.css",
@@ -193,5 +193,5 @@ if (workbox) {
     });
 
 } else {
-    console.log('Boo! Workbox didnt load 😬');
+    console.log('Workbox didnt load 😬');
 }
