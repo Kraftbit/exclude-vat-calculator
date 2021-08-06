@@ -22,7 +22,7 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "7186a1a7bd6c2068d0cd8aa781131c80"
+    "revision": "94c26821ce1b5272c4bae6f5c8ccf8a4"
   },
   {
     "url": "css/style.css",
