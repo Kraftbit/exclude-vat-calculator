@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://excludevat.com/</title>
+  <link>https://excludevat.com/</link>
+
+<item>
+     <link>https://excludevat.com/</link>
+     <title>Exclude VAT - VAT calculator</title>
+     <description>Exclude VAT calculator - easily calculate gross and net amount without or with VAT tax.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
