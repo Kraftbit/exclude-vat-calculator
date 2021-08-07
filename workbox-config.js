@@ -7,6 +7,8 @@ module.exports = {
   "swDest": "build/sw.js",
   "swSrc": "src/sw.js",
   "globIgnores": [
-    "../workbox-config.js"
+    "../workbox-config.js",
+    "js/calculator.js",
+    "css/tailwind.css"
   ]
 };
