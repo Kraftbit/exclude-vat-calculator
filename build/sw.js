@@ -15,8 +15,11 @@ limitations under the License.
 */
 
 importScripts('js/workbox-sw.js');
+import {NetworkFirst} from 'workbox-strategies';
 
 if (workbox) {
+
+    const networkFirst = new networkFirst();
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
@@ -152,7 +155,7 @@ if (workbox) {
   }
 ]);
 
-    const cacheHandler = workbox.strategies.networkFirst({
+    const cacheHandler = networkFirst({
             cacheName: 'index-cache',
             plugins: [
                 new workbox.expiration.ExpirationPlugin({
