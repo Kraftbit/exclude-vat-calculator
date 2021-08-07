@@ -2,7 +2,17 @@
 
 Exclude VAT calculator is web app and progressive web app (PWA) for calculating (substracting or adding) VAT (or any percentage) from amount.
 
-## Installation for  further development
+## Technologies
+
+This app is developed with:
+* HTML,
+* [Alpine.js](https://github.com/alpinejs/alpine) - minimal lightweight, JavaScript reactivity framework,
+* [TailwindCSS](https://tailwindcss.com/) - utility-first CSS framework) for styling
+* [Workbox](https://developers.google.com/web/tools/workbox) - Google's set of libraries for making Progressive Web App
+* [UglifyJS](https://www.npmjs.com/package/uglify-js) - JavaScript parser, minifier, compressor and beautifier toolkit
+* [copyfiles](https://www.npmjs.com/package/copyfiles) - copy files easily
+
+## Installation (for modifying and further development)
 
 Clone this repo, install dependencies and run build.
 
@@ -23,7 +33,7 @@ Run index.html from /build folder in your browser.
 
 ## Demo
 
-You can check how this app runs here - [http://excludevat.com](excludevat.com).
+You can check how this app runs here - [https://excludevat.com](excludevat.com).
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
