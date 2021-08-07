@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 importScripts('js/workbox-sw.js');
-import {NetworkFirst} from 'workbox-strategies';
 
 if (workbox) {
 
@@ -23,7 +22,7 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "774c03d9a47232c79ad78693c0948ca8"
+    "revision": "008819f102652eae40193a961b832601"
   },
   {
     "url": "css/style.css",
@@ -134,10 +133,6 @@ if (workbox) {
     "revision": "909b429cce3745fcab8eefbc0f47708c"
   },
   {
-    "url": "js/service-worker.js",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
-  },
-  {
     "url": "js/workbox-sw.js",
     "revision": "c39ab44e31cffb91e65ee5037d3ef8a5"
   },
@@ -159,7 +154,7 @@ if (workbox) {
   }
 ]);
 
-    const cacheHandler = new networkFirst({
+    const cacheHandler = workbox.strategies.networkFirst({
             cacheName: 'index-cache',
             plugins: [
                 new workbox.expiration.ExpirationPlugin({
