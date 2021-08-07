@@ -20,7 +20,7 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "5945e343abdef313dcd901874eefec0e"
+    "revision": "008819f102652eae40193a961b832601"
   },
   {
     "url": "css/style.css",
@@ -132,7 +132,7 @@ if (workbox) {
   },
   {
     "url": "pages/404.html",
-    "revision": "c29a60977b7b80d36907fd238a587542"
+    "revision": "03a4ef3c76e5362d4cfee2880a811f33"
   },
   {
     "url": "pages/offline.html",
