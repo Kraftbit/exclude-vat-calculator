@@ -21,7 +21,7 @@ if (workbox) {
 
     workbox.routing.registerRoute(
         /\.(?:html)$/,
-        workbox.strategies.NetworkFirst({
+        new workbox.strategies.NetworkFirst({
             cacheName: 'html-cache',
             plugins: [
                 new workbox.cacheableResponse.CacheableResponsePlugin({
