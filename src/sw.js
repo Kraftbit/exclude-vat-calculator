@@ -21,20 +21,20 @@ if (workbox) {
 
     workbox.routing.registerRoute(
         /\.(?:html)$/,
-        new workbox.strategies.NetworkFirst({
-          cacheName: 'html-cache',
-          plugins: [
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-              statuses: [0, 200],
-            }),
-    
-            new workbox.expiration.ExpirationPlugin({
-              maxEntries: 50,
-              maxAgeSeconds: 5 * 60,
-            })
-          ]
+        workbox.strategies.NetworkFirst({
+            cacheName: 'html-cache',
+            plugins: [
+                new workbox.cacheableResponse.CacheableResponsePlugin({
+                    statuses: [0, 200],
+                }),
+
+                new workbox.expiration.ExpirationPlugin({
+                    maxEntries: 50,
+                    maxAgeSeconds: 5 * 60,
+                })
+            ]
         })
-      )
+    )
 
 } else {
     console.log('Workbox didnt load 😬');
