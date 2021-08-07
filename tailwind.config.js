@@ -3,6 +3,8 @@ module.exports = {
     enabled: true,
     content: [
       './src/index.html',
+      './src/pages/404.html',
+      './src/pages/offline.html',
       './src/js/calculator.js'
     ]
   },

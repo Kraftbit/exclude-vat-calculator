@@ -20,11 +20,11 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "008819f102652eae40193a961b832601"
+    "revision": "5945e343abdef313dcd901874eefec0e"
   },
   {
     "url": "css/style.css",
-    "revision": "755e042d97de1c99d8251debfead5ce4"
+    "revision": "806418c27ccdbefce386454f25507e02"
   },
   {
     "url": "favicon.ico",
@@ -132,11 +132,11 @@ if (workbox) {
   },
   {
     "url": "pages/404.html",
-    "revision": "baa0ebf0b79f5abd6bd63e20339440d3"
+    "revision": "c29a60977b7b80d36907fd238a587542"
   },
   {
     "url": "pages/offline.html",
-    "revision": "3e68f0ab70f555f625425856980c7dde"
+    "revision": "3d3b7d84e4ec8e337be8e145d9c4477b"
   },
   {
     "url": "sitemap.html",
