@@ -15,14 +15,12 @@ limitations under the License.
 */
 
 importScripts('js/workbox-sw.js');
-import {NetworkFirst} from 'workbox-strategies';
+import {networkFirst} from 'workbox-strategies';
 
 if (workbox) {
-
-    const networkFirst = new networkFirst();
     workbox.precaching.precacheAndRoute([]);
 
-    const cacheHandler = networkFirst({
+    const cacheHandler = workbox.strategies.networkFirst({
             cacheName: 'index-cache',
             plugins: [
                 new workbox.expiration.ExpirationPlugin({
