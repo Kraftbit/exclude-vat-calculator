@@ -21,35 +21,17 @@ if (workbox) {
 
     workbox.precaching.precacheAndRoute([]);
 
-    /*
-    workbox.routing.registerRoute(
-        /(.*)articles(.*)\.(?:png|gif|jpg)/,
-        workbox.strategies.cacheFirst({
-            cacheName: 'images-cache',
+    const cacheHandler = workbox.strategies.networkFirst({
+            cacheName: 'index-cache',
             plugins: [
                 new workbox.expiration.ExpirationPlugin({
                     maxEntries: 50,
-                    maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
                 })
             ]
-        })
-    );
-   
-
-    const articleHandler = workbox.strategies.networkFirst({
-        cacheName: 'index-cache',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
-            })
-        ]
-    });
-     */
-
-    //     workbox.routing.registerRoute(/(.*)index(.*)\.html/, args => {
+        });
 
     workbox.routing.registerRoute('', args => {
-        return articleHandler.handle(args).then(response => {
+        return cacheHandler.handle(args).then(response => {
             if (!response) {
                 return caches.match('pages/offline.html');
             } else if (response.status === 404) {

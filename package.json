@@ -7,13 +7,18 @@
     "copy": "copyfiles -u 1 ./src/**/* ./src/* -e ./src/js/calculator.js build",
     "build": "NODE_ENV=production npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --minify && npx uglifyjs ./src/js/calculator.js -o ./src/js/calc.min.js --source-map && npm run copy && workbox injectManifest workbox-config.js"
   },
+  "author": "KRAFTBIT",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kraftbit/exclude-vat-calculator.git"
+  },
+  "homepage": "https://excludevat.com",
   "keywords": [
     "vat",
     "calculator",
     "exclude"
   ],
-  "author": "KRAFTBIT",
-  "license": "MIT",
   "devDependencies": {
     "copyfiles": "^1.2.0",
     "tailwindcss": "^2.2.7",
