@@ -4,7 +4,7 @@
   "description": "VAT Calculator, Exclude VAT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copy": "copyfiles -u 1 ./src/**/* ./src/* -e ./src/js/calculator.js build",
+    "copy": "copyfiles -u 1 -e ./src/js/calculator.js ./src/**/* ./src/* build",
     "build": "NODE_ENV=production npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --minify && npx uglifyjs ./src/js/calculator.js -o ./src/js/calc.min.js --source-map && npm run copy && workbox injectManifest workbox-config.js"
   },
   "author": "KRAFTBIT",

@@ -37,5 +37,5 @@ if (workbox) {
     )
 
 } else {
-    console.log('Workbox didnt load 😬');
+    console.log('Workbox didnt load :(');
 }
