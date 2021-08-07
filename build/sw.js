@@ -17,8 +17,6 @@ limitations under the License.
 importScripts('js/workbox-sw.js');
 
 if (workbox) {
-
-    const networkFirst = new networkFirst();
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
