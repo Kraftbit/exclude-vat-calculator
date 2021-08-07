@@ -19,25 +19,22 @@ importScripts('js/workbox-sw.js');
 if (workbox) {
     workbox.precaching.precacheAndRoute([]);
 
-    const cacheHandler = new workbox.strategies.networkFirst({
-            cacheName: 'index-cache',
-            plugins: [
-                new workbox.expiration.ExpirationPlugin({
-                    maxEntries: 50,
-                })
-            ]
-        });
-
-    workbox.routing.registerRoute('', args => {
-        return cacheHandler.handle(args).then(response => {
-            if (!response) {
-                return caches.match('pages/offline.html');
-            } else if (response.status === 404) {
-                return caches.match('pages/404.html');
-            }
-            return response;
-        });
-    });
+    workbox.routing.registerRoute(
+        /\.(?:html)$/,
+        new workbox.strategies.NetworkFirst({
+          cacheName: 'html-cache',
+          plugins: [
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+              statuses: [0, 200],
+            }),
+    
+            new workbox.expiration.ExpirationPlugin({
+              maxEntries: 50,
+              maxAgeSeconds: 5 * 60,
+            })
+          ]
+        })
+      )
 
 } else {
     console.log('Workbox didnt load 😬');
