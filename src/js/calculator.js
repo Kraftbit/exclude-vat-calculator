@@ -1,9 +1,14 @@
 // main calculator functionality
 window.calculator = function () {
     return {
-
         amount: '',
+        get amountValue() {
+            return Number(this.amount);
+        },
         vat: '',
+        get vatPercentage() {
+            return Number(this.vat);
+        },
         type: '0',
         emptyData: '',
 
@@ -37,21 +42,21 @@ window.calculator = function () {
 
         vatValue() {
             if(this.type == '0') {
-                return parseFloat(parseFloat(parseFloat(this.amount) / parseFloat(this.vat / 100 + 1) - parseFloat(this.amount) ) * parseInt(-1)).toFixed(2);
+                return parseFloat((this.amountValue / (this.vatPercentage / 100 + 1) - this.amountValue) * parseInt(-1)).toFixed(2)
             }
 
             if(this.type == '1') {
-                return parseFloat((parseFloat(this.amount) / 100) * parseFloat(this.vat)).toFixed(2);
+                return parseFloat((this.amountValue / 100) * this.vatPercentage).toFixed(2);
             }
         },
 
         result() {
             if(this.type == '0') {
-                return  parseFloat(parseFloat(this.amount) - parseFloat(parseFloat(parseFloat(this.amount) / parseFloat(this.vat / 100 + 1) - this.amount ) * parseInt(-1)) ).toFixed(2);
+                return  parseFloat(this.amountValue - ((this.amountValue / (this.vatPercentage / 100 + 1) - this.amountValue) * parseInt(-1)) ).toFixed(2);
             }
 
             if(this.type == '1') {
-                return parseFloat((parseFloat(this.amount) / 100) * parseFloat(this.vat) + parseFloat(this.amount)).toFixed(2);
+                return parseFloat((this.amountValue / 100) * this.vatPercentage + this.amountValue).toFixed(2);
             }
         }
 

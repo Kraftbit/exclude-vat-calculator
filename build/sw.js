@@ -120,7 +120,7 @@ if (workbox) {
   },
   {
     "url": "js/calc.min.js",
-    "revision": "298b2f4ba343d007ee33add7aaba09b1"
+    "revision": "d4c3e3a2195bd0dbd5b2c03b054e695c"
   },
   {
     "url": "js/workbox-sw.js",
@@ -136,7 +136,7 @@ if (workbox) {
   },
   {
     "url": "pages/offline.html",
-    "revision": "3d3b7d84e4ec8e337be8e145d9c4477b"
+    "revision": "41225fb8080287185e74d1057f04e9f5"
   },
   {
     "url": "sitemap.html",
