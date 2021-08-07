@@ -15,10 +15,11 @@ limitations under the License.
 */
 
 importScripts('js/workbox-sw.js');
+import {NetworkFirst} from 'workbox-strategies';
 
 if (workbox) {
-    //console.log('Yay! Workbox is loaded 🎉');
 
+    const networkFirst = new networkFirst();
     workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
@@ -133,6 +134,10 @@ if (workbox) {
     "revision": "909b429cce3745fcab8eefbc0f47708c"
   },
   {
+    "url": "js/service-worker.js",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
     "url": "js/workbox-sw.js",
     "revision": "c39ab44e31cffb91e65ee5037d3ef8a5"
   },
@@ -154,7 +159,7 @@ if (workbox) {
   }
 ]);
 
-    const cacheHandler = workbox.strategies.networkFirst({
+    const cacheHandler = new networkFirst({
             cacheName: 'index-cache',
             plugins: [
                 new workbox.expiration.ExpirationPlugin({
