@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google Tag Manager -->
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://storage.googleapis.com">  
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MDP9VH3');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,9 +21,6 @@
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDP9VH3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <div
         class="bg-gradient-to-t from-blue-800 to-blue-500 text-white font-mono flex flex-col min-h-screen min-w-full p-4">
 
@@ -63,10 +51,10 @@
                         <div class="w-2/5 flex justify-center items-center text-gray-500 text-sm">Exclude VAT</div>
                         <div class="w-1/5 flex justify-center items-center">
                             <div class="relative rounded-full w-full h-6 transition duration-200 ease-linear text-white"
-                                :class="[type === '1' ? 'bg-green-400' : 'bg-red-400']">+-
+                                :class="[type === '1' ? 'bg-green-400' : 'bg-red-400']">
                                 <label for="type"
-                                    class="absolute left-0 bg-white border-2 mb-2 w-1/2 h-6 rounded-full transition transform duration-100 ease-linear cursor-pointer"
-                                    :class="[type === '1' ? 'translate-x-full border-green-400' : 'translate-x-0 border-red-400']">
+                                    class="absolute left-0 bg-white border-2 mb-2 w-1/2 h-6 rounded-full transition transform duration-100 ease-linear cursor-pointer type-label"
+                                    :class="[type === '1' ? 'translate-x-full border-green-400' : 'translate-x-0 border-red-400']"><span class="text-gray-500" x-text="type === '0' ? '-' : '+'">+-</span>
                                 <input type="checkbox" id="type" name="type" 
                                     class="appearance-none w-full h-full active:outline-none focus:outline-none cursor-pointer"
                                     @click="type === '0' ? type = '1' : type = '0'"></label>
